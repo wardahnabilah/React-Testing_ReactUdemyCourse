@@ -5,7 +5,7 @@ import { Header } from '../components/Header'
 export function PageNotFound() {
   return (
     <main className="px-6 py-12 text-center">
-      <Header title="Oops, page not found!" />
+      <h1 className="mb-2 text-3xl font-bold" data-testid="pageNotFoundHeading">Oops, page not found!</h1>
       <div className="w-80 h-64 mx-auto mb-12">
         <img className="w-full h-full object-cover rounded-xl" src="/assets/images/page-not-found.jpg" alt="Page not found" />
       </div>

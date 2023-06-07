@@ -5,10 +5,10 @@ export function Joke() {
 
     useEffect(()=>{
       async function getJoke() {
-        const response = await fetch("https://api.chucknorris.io/jokes/random")
+        const response = await fetch("https://dog.ceo/api/breeds/image/random")
         const data = await response.json()
   
-        setJoke(data.value)
+        setJoke(data.message)
       }
   
       getJoke()
@@ -16,7 +16,7 @@ export function Joke() {
     
   return (
     <section>
-        <div className="mt-6 p-4 border-2 border-slate-600">
+        <div className="mt-6 p-4 border-2 border-slate-600" data-testid="jokeSection">
           {joke}
       </div>
     </section>
